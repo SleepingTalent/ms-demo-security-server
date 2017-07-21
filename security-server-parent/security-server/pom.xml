@@ -122,6 +122,7 @@
 									<directory>${basedir}/target/classes</directory>
 									<includes>
 										<include>*.bat</include>
+										<include>Dockerfile</include>
 									</includes>
 								</resource>
 							</resources>

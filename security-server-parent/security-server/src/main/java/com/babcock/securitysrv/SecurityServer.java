@@ -1,4 +1,4 @@
-package com.babcock;
+package com.babcock.securitysrv;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,11 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
 
-@EnableDiscoveryClient
-@EnableResourceServer
-@EnableAuthorizationServer
-@SpringBootApplication
 @RestController
+@SpringBootApplication
 public class SecurityServer {
 	public static void main(String[] args) {
 		SpringApplication.run(SecurityServer.class, args);

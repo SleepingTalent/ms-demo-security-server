@@ -59,8 +59,8 @@ public class SecurityServerTest {
         resourceDetails.setClientId("devApp");
         resourceDetails.setClientSecret("devAppSecret");
 
-        //resourceDetails.setAccessTokenUri("http://localhost:1111/auth/oauth/token");
-        resourceDetails.setAccessTokenUri("http://10.52.180.31/auth/oauth/token");
+        resourceDetails.setAccessTokenUri("http://localhost:1113/auth/oauth/token");
+        //resourceDetails.setAccessTokenUri("http://10.52.180.31/auth/oauth/token");
         resourceDetails.setGrantType("client_credentials");
 
         DefaultOAuth2ClientContext context = new DefaultOAuth2ClientContext();
@@ -69,7 +69,7 @@ public class SecurityServerTest {
         int count = 2;
 
         for(int i = 0; i < count; i++) {
-            String response = restTemplate.getForObject("http://10.52.180.35/security-admin-service/securityadmin/permissions", String.class);
+            String response = restTemplate.getForObject("http://localhost:2222/security-admin-service/securityadmin/permissions", String.class);
             //String response = restTemplate.getForObject("http://localhost:2222/security-admin-service/securityadmin/permissions", String.class);
             //String response = restTemplate.getForObject("http://localhost:3333/message-service/message/hystrixTest", String.class);
             assertEquals("circuit working as expected", response);
